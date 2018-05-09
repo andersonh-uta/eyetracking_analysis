@@ -1,0 +1,327 @@
+[All empty cells are indicated with a "." mark.]
+
+
+##########Reading Measures###########
+
+'RECORDING_SESSION_LABEL': The participant ID number.
+
+'item': The item number; each passage/part has a unique item number.
+
+'passage': The first six letters of the passage title.
+
+'part': The part within the passage; each passage has three parts -- Part1, Part2, Part3.
+
+'level': Text complexity level -- roughly, 2 = "intermediate", 1.5 = "intermediate-advanced", 1 = "advanced".
+
+'TRIAL_INDEX': The ordinal position of the item in the test session.
+
+'ANS': Indicates whether the comprehension question for the passage/part was answered correctly (CORRECT) or incorrectly (ERROR).
+
+'total_comp': Percent correct on comprehension questions for the session.
+
+'IA_ID': The ordinal position of the word in the passage/part.
+
+'ia_label': The word, along with its punctuation (except for quotation marks).
+
+'punct': The punctuation associated with the word (COM = comma, COM_RCDQ = comma + right close double quote, DASH = dash marks, ELLIPSES = period for ellipses, LBC = left bracket character, LODQ = left open double quote, PER = period, PER_RCDQ = period + right close double quote, RBC = right bracket character).
+
+'obj_len': The length of the word and any associated punctuation (in terms of characters).
+
+'part_status': Indicates whether there was a complete eye movement record for the passage/part ('complete') or whether there was tracker loss on one or more lines ('trac_loss').
+
+'len_check': Indicates whether the participant began the passage/part with one or more "length-checking" fixations (YES, NO).
+
+'trac_loss': Indicates whether there was tracker loss associated with each line in the passage/part (1 = tracker loss, 0 = no tracker loss).
+
+'POS': Part of speech for the word (following Penn Treebank part of speech tagging).
+
+'total_lines': The total number of lines in the passage/part.
+
+'line': The line on which the word appeared.
+
+'line_from_top': The distance of the line from the top line of passage/part (in terms of lines).
+
+'line_from_bottom': The distance of the line from the bottom line of passage/part (in terms of lines).	
+
+'total_words_line': The total number words in the line.
+
+'line_pos': The ordinal position of the word on the line.
+
+'line_pos_from_left': The distance of the word from the left edge of the line (in terms of words).
+
+'line_pos_from_right': The distance of the word from the right edge of the line (in terms of words).
+
+'paragraph': The paragraph in which the word appeared; each part had 1 or 2 paragraphs.
+
+'part_len': The length of the part/passage in terms of # of words.
+
+'IA_SKIP': Indicates whether the word was skipped during first-pass reading (1 = skipped, 0 = not skipped).
+
+'ff_index': The ordinal number of the fixation associated with the first fixation on the word.
+
+'ff_duration': The duration of the first fixation on the word (in milliseconds).
+
+'ff_xpos': The horizontal position of the first fixation on the word (in terms of pixels).
+
+'ff_lp': The location of the first fixation on the word (in terms of characters).
+
+'gaze': The sum of the first-pass fixation durations on the word (in milliseconds).
+
+'gaze_fix_count': The number of fixations that contributed to the 'gaze' measure.
+
+'rb_reading': The sum of all of the fixation durations on a word after fixating on the word, before moving past it to the right (in milliseconds). This measure DOES NOT includes regressive fixations.
+
+'go_past': The sum of all of the fixation durations after fixating on the word, before moving past it to the right (in milliseconds). This measure DOES include regressive fixations.
+
+[[[[[[NOTE: 'rb_reading' and 'go_past' should be treated with extreme caution -- especially go-past. If a reader fixates on a word and then goes back several lines in the text to reread, this go-past value is going to be very large.]]]]]]
+
+'fp_reg': Indicates whether the word triggered a regressive eye movement to a previous word during first-pass reading (1 = YES, 0 = NO).	
+
+'fp_reg_count': The number of times the word triggered a regressive eye movement to a previous word during first-pass reading.
+
+'total_reg_out_count': The number of times the word triggered a regressive eye movement to a previous word. [NOTE: This measure is not provided on passages/parts on which there was tracker loss.]
+
+'total_fix_count': The total number of fixations on the word. [NOTE: This measure is not provided on passages/parts on which there was tracker loss.]
+
+'total_time': The sum of all fixation durations on the word (in milliseconds). [NOTE: This measure is not provided on passages/parts on which there was tracker loss.]
+
+'trial_total_time': The sum of all fixation durations on the passage/part (in milliseconds). [NOTE: This measure is not provided on passages/parts on which there was tracker loss.]
+
+'trial_total_fix_count': The total number of fixations on the passage/part. [NOTE: This measure is not provided on passages/parts on which there was tracker loss.]
+
+'trial_mean_fix_duration': The mean duration of fixations on the passage/part (in milliseconds). [NOTE: This measure is not provided on passages/parts on which there was tracker loss.]
+
+'trial_per_word_fix': The mean # of fixations per word on the passage/part. [NOTE: This measure is not provided on passages/parts on which there was tracker loss.]
+
+'trial_rt': The time (in milliseconds) from the beginning of the trial until its completion (when the participant pressed the ENTER key to move to the comprehension question). [NOTE: This measure provides an indication of overall reading speed even in cases where there was tracker loss.]
+
+'trial_per_word_rt': The reading time per word for the trial (trial_rt / part_len). [NOTE: This measure provides an indication of overall reading speed even in cases where there was tracker loss.]
+
+'prev_fix_xpos': The horizontal position of the fixation immediately preceding the first fixation on the word (in terms of pixels).
+
+'launch_site_pix': The distance between the fixation immediately preceding the first fixation on the word and the beginning of that word (in terms of pixels).
+
+'launch_site_char': The distance between the fixation immediately preceding the first fixation on the word and the beginning of that word (in terms of characters).
+
+
+##########Participant Data###########
+
+'Sex': The sex of the participant.
+
+'Age': The age of the participant.
+
+'L1_Dom': The participant's first language (L1) in terms of dominance.
+
+'L2_Dom': The participant's second language (L2) in terms of dominance.
+
+'L3_Dom': The participant's third language (L3) in terms of dominance.
+
+'L4_Dom': The participant's fourth language (L4) in terms of dominance.
+
+'L1_Acq': The participant's first language (L1) in terms of acquisition order.
+
+'L2_Acq': The participant's second language (L2) in terms of acquisition order.
+
+'L3_Acq': The participant's third language (L3) in terms of acquisition order.
+
+'L4_Acq': The participant's fourth language (L4) in terms of acquisition order.
+
+[[[[[[NOTE: It is occasionally the case that there are disparities between L1/L2/L3/L4 in terms of dominance and L1/L2/L3/L4 in terms of acquisition order. In all subsequent measures L1/L2/L3/L4 refer to the determination based on acquisition order.]]]]]]
+
+'L1_%Exp': Percent exposure to the L1.
+
+'L2_%Exp': Percent exposure to the L2.
+
+'L3_%Exp': Percent exposure to the L3.
+
+'L4_%Exp': Percent exposure to the L4.
+
+'L1_AoAO': Age of onset for L1 acquisition.
+
+'L1_AoSF': Age at which spoken fluency was achieved in the L1.
+
+'L1_AoRO': Age of onset for L1 reading.
+
+'L1_AoRF': Age at which reading fluency was achieved in the L1.
+
+'L2_AoAO': Age of onset for L2 acquisition.
+
+'L2_AoSF': Age at which spoken fluency was achieved in the L2.
+
+'L2_AoRO': Age of onset for L2 reading.
+
+'L2_AoRF': Age at which reading fluency was achieved in the L2.	
+
+'L3_AoAO': Age of onset for L3 acquisition.
+
+'L3_AoSF': Age at which spoken fluency was achieved in the L3.
+
+'L3_AoRO': Age of onset for L3 reading.
+
+'L3_AoRF': Age at which reading fluency was achieved in the L3.
+
+'L4_AoAO': Age of onset for L4 acquisition.
+
+'L4_AoSF': Age at which spoken fluency was achieved in the L4.
+
+'L4_AoRO': Age of onset for L4 reading.
+
+'L4_AoRF': Age at which reading fluency was achieved in the L4.
+
+'L1_Prof_S': Self-rated proficiency for speaking in the L1 (0-10; 0 = not at all proficient; 10 = perfectly proficient).
+
+'L1_Prof_U': Self-rated proficiency for understanding in the L1 (0-10; 0 = not at all proficient; 10 = perfectly proficient).
+
+'L1_Prof_R': Self-rated proficiency for reading in the L1 (0-10; 0 = not at all proficient; 10 = perfectly proficient).
+
+'L2_Prof_S': Self-rated proficiency for speaking in the L2 (0-10; 0 = not at all proficient; 10 = perfectly proficient).
+
+'L2_Prof_U': Self-rated proficiency for understanding in the L2 (0-10; 0 = not at all proficient; 10 = perfectly proficient).
+
+'L2_Prof_R': Self-rated proficiency for reading in the L2 (0-10; 0 = not at all proficient; 10 = perfectly proficient).
+
+'L3_Prof_S': Self-rated proficiency for speaking in the L3 (0-10; 0 = not at all proficient; 10 = perfectly proficient).
+
+'L3_Prof_U': Self-rated proficiency for understanding in the L3 (0-10; 0 = not at all proficient; 10 = perfectly proficient).
+
+'L3_Prof_R': Self-rated proficiency for reading in the L3 (0-10; 0 = not at all proficient; 10 = perfectly proficient).
+
+'L4_Prof_S': Self-rated proficiency for speaking in the L4 (0-10; 0 = not at all proficient; 10 = perfectly proficient).
+
+'L4_Prof_U': Self-rated proficiency for understanding in the L4 (0-10; 0 = not at all proficient; 10 = perfectly proficient).
+
+'L4_Prof_R': Self-rated proficiency for reading in the L4 (0-10; 0 = not at all proficient; 10 = perfectly proficient).
+
+'L1_%RT': The percent of total reading time spent reading in the L1.
+
+'L2_%RT': The percent of total reading time spent reading in the L2.
+
+'L3_%RT': The percent of total reading time spent reading in the L3.
+
+'L4_%RT': The percent of total reading time spent reading in the L4.
+
+'L1_RT': Time spent reading in the L1 (0-10; 0 = very little time; 10 = a lot of time).
+
+'L2_RT': Time spent reading in the L2 (0-10; 0 = very little time; 10 = a lot of time).
+
+'L3_RT': Time spent reading in the L3 (0-10; 0 = very little time; 10 = a lot of time).
+
+'L4_RT': Time spent reading in the L4 (0-10; 0 = very little time; 10 = a lot of time).
+
+'L1_RE': Reading enjoyment in the L1 (0-10; 0 = don’t enjoy it at all; 10 = enjoy it very much).
+
+'L2_RE': Reading enjoyment in the L2 (0-10; 0 = don’t enjoy it at all; 10 = enjoy it very much).
+
+'L3_RE': Reading enjoyment in the L3 (0-10; 0 = don’t enjoy it at all; 10 = enjoy it very much).
+
+'L4_RE': Reading enjoyment in the L4 (0-10; 0 = don’t enjoy it at all; 10 = enjoy it very much).
+
+'L1_RS': Reading speed in the L1 (0-10; 0 = very slow; 10 = very fast).
+
+'L2_RS': Reading speed in the L2 (0-10; 0 = very slow; 10 = very fast).
+
+'L3_RS': Reading speed in the L3 (0-10; 0 = very slow; 10 = very fast).
+
+'L4_RS': Reading speed in the L4 (0-10; 0 = very slow; 10 = very fast).
+
+'L1_RMC': Complexity of L1 reading material (0-10; 0 = not at all complex; 10 = very complex).
+
+'L2_RMC': Complexity of L2 reading material (0-10; 0 = not at all complex; 10 = very complex).
+
+'L3_RMC': Complexity of L3 reading material (0-10; 0 = not at all complex; 10 = very complex).
+
+'L4_RMC': Complexity of L4 reading material (0-10; 0 = not at all complex; 10 = very complex).
+
+'Educ': Highest level of education completed.
+
+'AoRes': Age when participant began living in the US.
+
+'vision_problem': Indicates whether the participant has (had) a vision problem (and the nature of this problem).	
+
+'vision_problem_treatment': The treatment received for an identified vision problem.
+
+'hearing_impairment': Indicates whether the participant has (had) hearing impairment (and the nature of this impairment).	
+
+'hearing_impairment_treatment': The treatment received for an identified hearing impairment.
+
+'language_disability': Indicates whether the participant has (had) a language disability (and the nature of this disability).	
+
+'language_disability_treatment': The treatment received for an identified language disability.
+
+'reading_disability': Indicates whether the participant has (had) a reading disability (and the nature of this disability).	
+
+'reading_disability_treatment': The treatment received for an identified reading disability.
+
+'ART': Score on the Author Recognition Test (a measure of reading exposure).
+
+'Lextale': Score on the Lextale test (a measure of English vocabulary size).	
+
+'Session_date': Date of the study session.
+
+'TOEFL': Indicates whether the participant has taken the TOEFL exam (YES, NO).
+
+'TOEFL_date': Date of the participant's most recent TOEFL exam.
+
+'TOEFL_pb': Indicates whether the participant took the paper-based version of the TOEFL (YES, NO).
+
+'TOEFL_pb_TS': Total score on the paper-based version of the TOEFL.
+
+'TOEFL_pb_RCS': Score on the reading comprehension section of the paper-based TOEFL.
+
+'TOEFL_pb_SWES': Score on the structure/written expression section of the paper-based TOEFL.
+
+'TOEFL_pb_LCS': Score on the listening comprehension section of the paper-based TOEFL.
+
+'TOEFL_pb_TWES': Score on the test of written English section of the paper-based TOEFL.
+
+'TOEFL_iBT': Indicates whether the participant took the computer-based version of the TOEFL (YES, NO).
+
+'TOEFL_iBT_TS': Total score on the computer-based version of the TOEFL.
+
+'TOEFL_iBT_RS': Score on the reading section of the computer-based TOEFL.
+
+'TOEFL_iBT_WS': Score on the writing section of the computer-based TOEFL.
+
+'TOEFL_iBT_LS': Score on the listening section of the computer-based TOEFL.
+
+'TOEFL_iBT_SS': Score on the speaking section of the computer-based TOEFL.
+
+'IELTS': Indicates whether the participant has taken the IELTS exam (YES, NO).
+
+'IELTS_date': Date of the participant's most recent IELTS exam.
+
+'IELTS_TS': Total score on the IELTS exam.
+
+'IELTS_RS':	Score on the reading section of the IELTS exam.
+
+'IELTS_WS':	Score on the writing section of the IELTS exam.
+
+'IELTS_LS':	Score on the listening section of the IELTS exam.	
+
+'IELTS_SS':	Score on the speaking section of the IELTS exam.
+
+'ELI': Indicates whether the participant is a student in the English Language Institute ELI) at UT Arlington (YES, NO).
+
+'ELI_EAP': Indicates whether the participant is a student in the English for Academic Purposes (EAP) program at the ELI (YES, NO).
+
+'ELI_RWL': Reading and Writing level in the EAP program.
+
+'ELI_LSL': Listening and Speaking level in the EAP program.
+
+'ELI_GL': Grammar level in the EAP program.
+
+'GESP': Indicates whether the participant is a student in the Graduate English (GESP) program at the ELI (YES, NO).	
+
+'GESP_R': Indicates whether the participant is the reading class in the GESP program (YES, NO).
+
+'GESP_W': Indicates whether the participant is the writing class in the GESP program (YES, NO).
+
+'GESP_LS': Indicates whether the participant is the listening/speaking class in the GESP program (YES, NO).
+
+'UTA_stud': Indicates whether the participant is a student in a degree-granting program at UT Arlington (YES, NO). 
+
+'UTA_degree': The participant's degree program (bachelors, masters, graduate_certificate, phd).
+
+'UTA_major': The participant's major.	
+
+'UTA_year': The participant's year in the degree program. 
